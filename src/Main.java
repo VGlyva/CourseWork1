@@ -23,10 +23,10 @@ public class Main {
         System.out.println("Максимальная зарплата сотрудников составляет: " +Employee.maxSalary(employees) + "рублей");
         Employee.minSalary(employees);
         Employee.divider();
-        System.out.println("Минимальная зарплвта сотрудников составляет: " + Employee.minSalary(employees) + "рублей");
+        System.out.println("Минимальная зарплвта сотрудников составляет:  " + Employee.minSalary(employees) + "рублей");
         Employee.totalSalary(employees);
         Employee.divider();
-        System.out.println("Среднее арифметическое зарплат сотрудников составляет: " + Employee.totalSalary(employees) / employees.length + " рублей");
+        System.out.println("Среднее арифметическое зарплат сотрудников составляет:  " + Employee.totalSalary(employees) / employees.length + " рублей");
         Employee.divider();
         Employee.printFio(employees);
     }

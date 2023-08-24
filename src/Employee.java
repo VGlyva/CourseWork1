@@ -97,7 +97,7 @@ public class Employee {
     }
 
     public static void divider() {
-        System.out.println("=====================");
+        System.out.println(" =====================");
     }
 
 }
