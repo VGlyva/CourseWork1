@@ -98,8 +98,17 @@ public class Employee {
         }
     }
     public static int middleSalary(Employee[] employees) {
+        int count = 0;
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null) {
+                count++;
+                if (count == 0) {
+                    return 0;
+                }
+            }
+        }
         int totalSalaryTwo = totalSalary(employees);
-        int middleSalary = totalSalaryTwo / employees.length;
+        int middleSalary = totalSalaryTwo / count;
         System.out.println("Средняя зарплата сотрудников cоставляет = " + middleSalary);
         return middleSalary;
     }

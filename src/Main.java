@@ -20,7 +20,7 @@ public class Main {
         System.out.println("Сумма зарплат сотрудников составляет: " + Employee.totalSalary(employees) + " рублей");
         Employee.divider();
         Employee.maxSalary(employees);
-        System.out.println(Employee.maxSalary(employees) + " зарабатывает больше всех");
+        System.out.println(Employee.maxSalary(employees) + " зарабатывает больше всех.");
         Employee.divider();
         Employee.minSalary(employees);
         System.out.println(Employee.minSalary(employees) + " зарабатывает меньше всех");
