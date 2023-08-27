@@ -49,7 +49,6 @@ public class Employee {
         return "ID № " + this.id + " ФИО: " + this.nick + "." + " Зарплата: " + this.salary + "." + " Депортамент № " + this.department;
     }
 
-    // вызов всех сотрудников
     public static void showAll(Employee[] employees) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null) {
@@ -59,7 +58,6 @@ public class Employee {
         }
     }
 
-    // сумма всех зарплат
     public static int totalSalary(Employee[] employees) {
         int allSalary = 0;
         for (Employee employee : employees) {
@@ -68,38 +66,56 @@ public class Employee {
         return allSalary;
     }
 
-    // максимальная зарплата сотрудников
-    public static int maxSalary(Employee[] arr) {
-        int storageMaxSalary = -1;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].salary > storageMaxSalary) {
-                storageMaxSalary = arr[i].salary;
+    public static Employee maxSalary(Employee[] employees) {
+        int index = 0;
+        int maxSalary = 0;
+        for (int i = 0; i < employees.length; i++) {
+            if (maxSalary < employees[i].getSalary()) {
+                maxSalary = employees[i].getSalary();
+                index = i;
             }
         }
-        return storageMaxSalary;
+        return employees[index];
     }
 
-    public static int minSalary(Employee[] arr) {
-        int storageMinSalary = arr[0].salary;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].salary < storageMinSalary) {
-                storageMinSalary = arr[i].salary;
+    public static Employee minSalary(Employee[] employees) {
+        int index = 0;
+        int storageMinSalary = Integer.MAX_VALUE;
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i].getSalary() < storageMinSalary) {
+                storageMinSalary = employees[i].salary;
+                index = i;
             }
-
         }
-        return storageMinSalary;
+        return employees[index];
     }
+
+
 
     public static void printFio(Employee[] employees) {
         for (Employee employee : employees) {
             System.out.println(employee.getNick());
         }
     }
-
-    public static void divider() {
-        System.out.println("=====================");
+    public static int middleSalary(Employee[] employees) {
+        int count = 0;
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null) {
+                count++;
+                if (count == 0) {
+                    return 0;
+                }
+            }
+        }
+        int totalSalaryTwo = totalSalary(employees);
+        int middleSalary = totalSalaryTwo / count;
+        System.out.println("Средняя зарплата сотрудников cоставляет = " + middleSalary);
+        return middleSalary;
     }
 
+    public static void divider() {
+        System.out.println(" =====================");
+    }
 }
 
 

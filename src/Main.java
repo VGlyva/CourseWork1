@@ -17,16 +17,16 @@ public class Main {
         Employee.showAll(employees);
         Employee.divider();
         Employee.totalSalary(employees);
-        System.out.println("Сумма затрат на зарплаты сотрудинков составляет: " +Employee.totalSalary(employees) + " рублей");
+        System.out.println("Сумма зарплат сотрудников составляет: " + Employee.totalSalary(employees) + " рублей");
+        Employee.divider();
         Employee.maxSalary(employees);
+        System.out.println(Employee.maxSalary(employees) + " зарабатывает больше всех.");
         Employee.divider();
-        System.out.println("Максимальная зарплата сотрудников составляет: " +Employee.maxSalary(employees) + "рублей");
         Employee.minSalary(employees);
-        Employee.divider();
-        System.out.println("Минимальная зарплвта сотрудников составляет: " + Employee.minSalary(employees) + "рублей");
+        System.out.println(Employee.minSalary(employees) + " зарабатывает меньше всех");
         Employee.totalSalary(employees);
         Employee.divider();
-        System.out.println("Среднее арифметическое зарплат сотрудников составляет: " + Employee.totalSalary(employees) / employees.length + " рублей");
+        Employee.middleSalary(employees);
         Employee.divider();
         Employee.printFio(employees);
     }
